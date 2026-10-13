@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+   
+<div class="container">
+   <div class="row">
+      <div class="col-12 col-sm-8 col-md-5 col-lg-4 mx-auto mt-5">
+         <div class="calculatorbody bg-primary p-3 rounded shadow">
+            <table class="table table-borderless m-0">
+              <tr>
+                  <td colspan="4"><input type="text" id="myresult" placeholder="# md ashrafulhossain ridoy " class="form-control mb-3 text-end fs-4 p-2 shadow-sm"></td>
+              </tr>
+              <tr>
+                  <td><input type="button" class="btn btn-light w-100 mb-2 py-2 fw-bold" value="C" onclick="deleteme()"></td>
+                  <td><input type="button" class="btn btn-light w-100 mb-2 py-2 fw-bold" value="(" onclick="calculator('(')"></td>
+                  <td><input type="button" class="btn btn-light w-100 mb-2 py-2 fw-bold" value=")" onclick="calculator(')')"></td>
+                  <td><input type="button" class="btn btn-light w-100 mb-2 py-2 fw-bold" value="f1" onclick="calculator('f1')"></td>
+              </tr>
+              <tr>
+                  <td><input type="button" class="btn btn-light w-100 mb-2 py-2" value="7" onclick="calculator('7')"></td>
+                  <td><input type="button" class="btn btn-light w-100 mb-2 py-2" value="8" onclick="calculator('8')"></td>
+                  <td><input type="button" class="btn btn-light w-100 mb-2 py-2" value="9" onclick="calculator('9')"></td>
+                  <td><input type="button" class="btn btn-warning w-100 mb-2 py-2 fw-bold" value="+" onclick="calculator('+')"></td>
+              </tr>
+              <tr>
+                  <td><input type="button" class="btn btn-light w-100 mb-2 py-2" value="4" onclick="calculator('4')"></td>
+                  <td><input type="button" class="btn btn-light w-100 mb-2 py-2" value="5" onclick="calculator('5')"></td>
+                  <td><input type="button" class="btn btn-light w-100 mb-2 py-2" value="6" onclick="calculator('6')"></td>
+                  <td><input type="button" class="btn btn-warning w-100 mb-2 py-2 fw-bold" value="-" onclick="calculator('-')"></td>
+              </tr>
+              <tr>
+                  <td><input type="button" class="btn btn-light w-100 mb-2 py-2" value="1" onclick="calculator('1')"></td>
+                  <td><input type="button" class="btn btn-light w-100 mb-2 py-2" value="2" onclick="calculator('2')"></td>
+                  <td><input type="button" class="btn btn-light w-100 mb-2 py-2" value="3" onclick="calculator('3')"></td>
+                  <td><input type="button" class="btn btn-warning w-100 mb-2 py-2 fw-bold" value="*" onclick="calculator('*')"></td>
+              </tr>
+              <tr>
+                  <td><input type="button" class="btn btn-light w-100 mb-2 py-2" value="0" onclick="calculator('0')"></td>
+                  <td><input type="button" class="btn btn-light w-100 mb-2 py-2" value="." onclick="calculator('.')"></td>
+                  <td><input type="button" class="btn btn-warning w-100 mb-2 py-2 fw-bold" value="/" onclick="calculator('/')"></td>
+                  <td><input type="button" class="btn btn-success w-100 mb-2 py-2 fw-bold" value="=" onclick="answer()"></td>
+              </tr>
+            </table>
+         </div>
+
+      </div>
+   </div>
+</div>
+
+<script>
+    function deleteme(){
+        document.getElementById("myresult").value =""
+    }
+    function answer(){
+      var a= document.getElementById("myresult").value;
+      var b=eval(a);
+      document.getElementById("myresult").value=b;
+    }
+    function calculator(newvalue){
+        document.getElementById("myresult").value +=newvalue
+    }
+</script>
+</body>
+</html>
